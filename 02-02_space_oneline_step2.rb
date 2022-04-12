@@ -2,11 +2,11 @@
 #　https://paiza.jp/works/mondai/stdout_primer/stdout_primer__space_oneline_step2
 
 # 解答例1
-n1 = 1
+n1 = 8
 n2 = 1
-n3 = 1
+n3 = 3
 # 出力
-puts("#{s1} #{s2} #{s3}")
+puts("#{n1} #{n2} #{n3}")
 
 # 解答例2
 n1 = 8
