@@ -28,7 +28,7 @@ puts(ary)
 # 解答例2
 # 入力
 n = gets.to_i
-# 1 から n まで 1 増やしながら繰り返す
+# num を 1 から n まで 1 増やしながら繰り返す
 1.upto(n) do |num|
   puts(num)
 end
