@@ -11,17 +11,12 @@ OUTPUT1 = <<~"EOS"
   learning
 EOS
 
-# 解答例1
+# 解答例
 s = gets.chomp
 t = gets.chomp
 # 出力
-puts("#{s} #{t}")
-
-# 解答例2
-s = gets.chomp
-t = gets.chomp
-# 出力
-puts(s + " " + t)
+puts(s)
+puts(t)
 
 =begin
 入力された 2 つの文字列を出力 (paizaランク D 相当)
