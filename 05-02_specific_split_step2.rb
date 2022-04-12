@@ -21,9 +21,8 @@ OUTPUT2 = <<~"EOS"
 EOS
 
 # 解答例1
-n = 3
 # 入力
-ary = n.times.map { gets.chomp }
+ary = 3.times.map { gets.chomp }
 # 出力
 puts(ary.join(" | "))
 

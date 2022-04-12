@@ -34,17 +34,15 @@ OUTPUT2 = <<~"EOS"
   804 | 42 | 547 | 203 | 795 | 607 | 922 | 378 | 268 | 979
 EOS
 
-# # 解答例1
-# n = 10
-# # 入力
-# ary = n.times.map { gets.to_i }
-# # 出力
-# puts(ary.join(" | "))
+# 解答例1
+# 入力
+ary = 10.times.map { gets.to_i }
+# 出力
+puts(ary.join(" | "))
 
 # 解答例2
-n = 10
 # 入力
-ary = n.times.map { gets.to_i }
+ary = 10.times.map { gets.to_i }
 # 配列 ary の先頭から順に " | " で連結する
 s = ""
 ary.each_with_index do |n, i|
