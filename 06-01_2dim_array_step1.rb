@@ -4,7 +4,29 @@
 # 解答例1
 ary = [[0, 8], [1, 3]]
 # 出力
-puts(ary.map { |l| l.join(" ") }.join("\n"))
+puts(ary.map { |row| row.join(" ") }.join("\n"))
+
+# 解答例2
+ary = [[0, 8], [1, 3]]
+# 出力
+ary.each do |row|
+  puts(row.join(" "))
+end
+
+# 解答例3
+w = 2
+ary = [0, 8, 1, 3]
+# 出力
+row = []
+# ary の先頭から順に、i=1 から 1 ずつ増加した値と一緒に参照する
+ary.each.with_index(1) do |n, i|
+  # n (i 番目の要素) を row に追加する
+  row.push(n)
+  if i % w == 0
+    puts(row.join(" "))
+    row = []
+  end
+end
 
 =begin
 2 * 2 の出力 (paizaランク D 相当)

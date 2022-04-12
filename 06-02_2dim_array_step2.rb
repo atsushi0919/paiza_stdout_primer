@@ -1,7 +1,54 @@
-#
-#
+# 3 * 3 の出力 (paizaランク D 相当)
+# https://paiza.jp/works/mondai/stdout_primer/stdout_primer__2dim_array_step2
 
 # 入出力例
+INPUT1 = <<~"EOS"
+  0 1 2 3 4 5 6 7 8
+EOS
+OUTPUT1 = <<~"EOS"
+  0 1 2
+  3 4 5
+  6 7 8
+EOS
+
+# 解答例1
+w = 3
+# 入力
+ary = gets.split.map(&:to_i)
+# 3 x 3 の行列を作成
+matrix = []
+row = []
+# ary の先頭から順に、i=1 から 1 ずつ増加した値と一緒に参照する
+ary.each.with_index(1) do |n, i|
+  # n (i 番目の要素) を row に追加する
+  row.push(n)
+  # w=3 個毎に matrix に row を追加し row を空にする 
+  if i % w == 0
+    matrix.push(row)
+    row = []
+  end
+end
+# 出力
+puts(matrix.map { |row| row.join(" ") }.join("\n"))
+
+# 解答例2
+w = 3
+# 入力
+ary = gets.split.map(&:to_i)
+# 3 x 3 の行列を作成
+matrix = []
+row = []
+while ary.length > 0
+  # ary の先頭から要素を取り出して row に追加する
+  row.push(ary.shift)
+  # row の要素数が w=3 個なら matrix に row を追加し row を空にする
+  if row.length == w
+    matrix.push(row)
+    row = []
+  end
+end
+# 出力
+puts(matrix.map { |row| row.join(" ") }.join("\n"))
 
 =begin
 3 * 3 の出力 (paizaランク D 相当)
