@@ -30,6 +30,7 @@ puts(ary)
 n = gets.to_i
 # num を 1 から n まで 1 ずつ増やしながら繰り返す
 1.upto(n) do |num|
+  # 出力
   puts(num)
 end
 
