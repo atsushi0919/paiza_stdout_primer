@@ -5,13 +5,13 @@
 s1 = "paiza"
 s2 = "learning"
 # 出力
-puts(s1 + " " + s2)
+puts("#{s1} #{s2}")
 
 # 解答例2
 s1 = "paiza"
 s2 = "learning"
 # 出力
-puts("#{s1} #{s2}")
+puts(s1 + " " + s2)
 
 =begin
 2 つの文字列を出力 (paizaランク D 相当)

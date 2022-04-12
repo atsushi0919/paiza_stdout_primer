@@ -28,6 +28,14 @@ puts(ary)
 # 入力
 ary = gets.split
 # 出力
+ary.each do |s|
+  puts(s)
+end
+
+# 解答例3
+# 入力
+ary = gets.split
+# 出力
 0.upto(ary.length - 1) do |i|
   puts(ary[i])
 end

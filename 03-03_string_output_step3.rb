@@ -15,13 +15,13 @@ EOS
 s = gets.chomp
 t = gets.chomp
 # 出力
-puts(s + " " + t)
+puts("#{s} #{t}")
 
 # 解答例2
 s = gets.chomp
 t = gets.chomp
 # 出力
-puts("#{s} #{t}")
+puts(s + " " + t)
 
 =begin
 入力された 2 つの文字列を出力 (paizaランク D 相当)

@@ -19,25 +19,27 @@ OUTPUT1 = <<~"EOS"
 EOS
 
 # 解答例1
-n = 10
-# n 行の入力を配列 ary に格納
+# 10 行の入力を配列 ary に格納
+ary = 10.times.map { gets.chomp }
+# 出力
+puts(ary.join(" "))
+
+# 解答例2
+# 10 行の入力を配列 ary に格納
 ary = []
-n.times do
+10.times do
   ary.push(gets.chomp)
 end
 # 出力
 puts(ary.join(" "))
 
-# 解答例2
-n = 10
-# n 行の入力
+# 解答例3
+# 10 行の入力
 s = ""
-n.times do |i|
+10.times do |i|
   s += gets.chomp
   # 最後の入力に半角スペースは追加しない
-  if i == n - 1
-    break
-  end
+  break if i == n - 1
   s += " "
 end
 # 出力
