@@ -2,10 +2,9 @@
 #　https://paiza.jp/works/mondai/stdout_primer/stdout_primer__space_oneline_step4
 
 # 入出力例1
-n = 10
 # 1 から 10 までの 配列ary を生成
-ary = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-ary = (1..n).to_a
+# ary = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ary = (1..10).to_a
 # 出力
 puts(ary.join(" "))
 
@@ -16,9 +15,7 @@ s = ""
 1.upto(n) do |num|
   s += n.to_s
   # 最後の数字にはスペースを追加しない
-  if num == n
-    break
-  end
+  break if num == n
   s += " "
 end
 # 出力
