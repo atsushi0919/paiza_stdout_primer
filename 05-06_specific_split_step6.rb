@@ -23,7 +23,7 @@ OUTPUT3 = <<~"EOS"
   123,456,789,123,456,789
 EOS
 
-# 解答例
+# 解答例1
 # 入力
 n = gets.to_i
 # n を文字列に変換して1文字に分割した配列を生成
@@ -36,6 +36,13 @@ ary.each.with_index(1) do |c, i|
   s += "," if i % 3 == 0
 end
 # 出力
+puts(s)
+
+# 解答例2
+# 入力
+n = gets.to_i
+# 3 桁毎に "," を挿入した文字列を生成
+s = n.to_s.gsub(/(\d{3})(?!\z)/, '\0,')
 puts(s)
 
 =begin

@@ -23,7 +23,7 @@ OUTPUT3 = <<~"EOS"
   12,345,678,901,234,567,890
 EOS
 
-# 解答例
+# 解答例1
 # 入力
 n = gets.to_i
 # 3 桁毎に "," を追加する
@@ -37,6 +37,13 @@ r_ary.each.with_index(1) do |c, i|
 end
 s.reverse!
 # 出力
+puts(s)
+
+# 解答例2
+# 入力
+n = gets.to_i
+# 3 桁毎に "," を挿入した文字列を生成
+s = n.to_s.gsub(/(\d)(?=(\d{3})+(?!(\d)))/, '\1,')
 puts(s)
 
 =begin
