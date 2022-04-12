@@ -18,13 +18,13 @@ EOS
 
 # 解答例1
 # 入力
-n, m = gets.split.map(to_i)
+n, m = gets.split.map(&:to_i)
 # 出力
 puts("#{n},#{m}")
 
 # 解答例2
 # 入力
-n, m = gets.split.map(to_i)
+n, m = gets.split.map(&:to_i)
 # 出力
 puts(n.to_s + "," + m.to_s)
 

@@ -24,7 +24,7 @@ EOS
 # 入力
 ary = 3.times.map { gets.chomp }
 # 出力
-puts(ary.join(" | "))
+puts(ary.join("|"))
 
 # 解答例2
 # 入力
@@ -32,7 +32,7 @@ s1 = gets.chomp
 s2 = gets.chomp
 s3 = gets.chomp
 # 出力
-puts("#{s1} | #{s2} | #{s3}")
+puts("#{s1}|#{s2}|#{s3}")
 
 # 解答例3
 # 入力
@@ -40,7 +40,7 @@ s1 = gets.chomp
 s2 = gets.chomp
 s3 = gets.chomp
 # 出力
-puts(s1.to_s + " | " + s2.to_s + " | " + s3.to_i)
+puts(s1 + "|" + s2 + "|" + s3)
 
 =begin
 バーティカルライン区切りで 3 つの文字列を出力 (paizaランク D 相当)
