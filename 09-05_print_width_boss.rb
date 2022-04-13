@@ -1,7 +1,36 @@
-#
-#
+# 【出力幅を指定して出力】N 個の数値を M けた半角スペース埋めで出力 (paizaランク D 相当)
+# https://paiza.jp/works/mondai/stdout_primer/stdout_primer__print_width_boss
 
 # 入出力例
+INPUT1 = <<~"EOS"
+  4 3
+  0
+  8
+  81
+  813
+EOS
+OUTPUT1 = <<~"EOS"
+  0
+  8
+  81
+  813
+EOS
+
+# 解答例1
+# 1 行目入力
+n, m = gets.split.map(&:to_i)
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
+ary.each { |num| puts("%#{m}d" % num) }
+
+# 解答例2
+# 1 行目入力
+n, m = gets.split.map(&:to_i)
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
+ary.each { |num| puts(num.to_s.rjust(m)) }
 
 =begin
 【出力幅を指定して出力】N 個の数値を M けた半角スペース埋めで出力 (paizaランク D 相当)
