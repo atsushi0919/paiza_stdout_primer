@@ -16,15 +16,15 @@ OUTPUT1 = <<~"EOS"
   0.8130
 EOS
 
-# # 解答例1
-# # 入力
-# q = gets.to_i
-# ary = q.times.map do
-#   n, m = gets.split
-#   [n.to_f, m.to_i]
-# end
-# # 出力
-# ary.each { |n, m| puts("%.#{m}f" % n.round(m)) }
+# 解答例1
+# 入力
+q = gets.to_i
+ary = q.times.map do
+  n, m = gets.split
+  [n.to_f, m.to_i]
+end
+# 出力
+ary.each { |n, m| puts("%.#{m}f" % n.round(m)) }
 
 # 解答例2
 # 入力

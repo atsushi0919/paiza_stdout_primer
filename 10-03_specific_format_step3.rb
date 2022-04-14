@@ -1,7 +1,24 @@
-#
-#
+# 九九表を罫線入りで出力 (paizaランク C 相当)
+# https://paiza.jp/works/mondai/stdout_primer/stdout_primer__specific_format_step3
 
-# 入出力例
+# 解答例1
+# 1 から 9 の段の答えを指定書式で配列 dan に格納
+dan = 1.upto(9).map do |i|
+  # i 段の答えを " | " で連結し末尾に改行を追加
+  1.upto(9).map { |j| "%2d" % (i * j) }.join(" | ") << "\n"
+end
+# 配列 dan を "=" * 42 << "\n" で連結
+kuku = dan.join("=" * 42 << "\n")
+# 出力
+puts(kuku)
+
+# 解答例2
+# 指定書式で九九の表を作成
+kuku = 1.upto(9).map { |i|
+  1.upto(9).map { |j| "%2d" % (i * j) }.join(" | ") << "\n"
+}.join("=" * 42 << "\n")
+# 出力
+puts(kuku)
 
 =begin
 九九表を罫線入りで出力 (paizaランク C 相当)
@@ -17,7 +34,8 @@ https://paiza.jp/works/mondai/stdout_primer/stdout_primer__specific_format_step3
 問題
  下記の問題をプログラミングしてみよう！
 九九表を、横の数値間では | (半角スペース 2 つとバーティカルライン)、縦の数値間では = で区切って出力してください。
-ただし、数値を出力する際は 2 けたになるよう半角スペース埋めで出力します。また、縦の数値間で = を出力する際は、その上の行と文字数が等しくなるように出力します。
+ただし、数値を出力する際は 2 けたになるよう半角スペース埋めで出力します。
+また、縦の数値間で = を出力する際は、その上の行と文字数が等しくなるように出力します。
 
 入力される値
 なし
