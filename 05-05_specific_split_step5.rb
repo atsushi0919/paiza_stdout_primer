@@ -39,11 +39,12 @@ EOS
 ary = 10.times.map { gets.to_i }
 # ary 末尾のインデックス
 e_i = ary.length - 1
-# ary 先頭から順に " | " で連結する
+# i=0 から e_i までカウントアップしながら繰り返す
 s = ""
 0.upto(e_i) do |i|
-  s += ary[i]
-  # 最後の要素以外は " | " を追加する
+  # ary[i] を文字列に変換して文字列 s に追加
+  s += ary[i].to_s
+  # 最後の要素以外は文字列 s に "," を追加
   s += " | " if i != e_i
 end
 # 出力

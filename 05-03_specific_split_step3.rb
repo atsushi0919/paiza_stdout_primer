@@ -19,10 +19,13 @@ EOS
 # 解答例1
 # 入力
 ary = gets.split.map(&:to_i)
-# ary 先頭から順に "," を追加する
+# ary 先頭から順に参照する
 s = ""
 ary.each do |n|
-  s += n.to_s + ","
+  # 文字列 s に 文字列に変換した n を追加
+  s += n.to_s
+  # 文字列 s に "," を追加
+  s += ","
 end
 # 出力
 puts(s)

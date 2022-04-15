@@ -4,10 +4,14 @@
 # 解答例1
 # 入力
 ary = map(int, input().split())
-# ary 先頭から順に "," を追加する
+
+# ary 先頭から順に参照する
 s = ""
 for n in ary:
-    s += str(n) + ","
+    # 文字列 s に 文字列に変換した n を追加
+    s += str(n)
+    # 文字列 s に "," を追加
+    s += ","
 # 出力
 print(s)
 
