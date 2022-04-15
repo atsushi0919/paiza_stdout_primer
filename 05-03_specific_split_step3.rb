@@ -19,19 +19,19 @@ EOS
 # 解答例1
 # 入力
 ary = gets.split.map(&:to_i)
-# 出力
-puts(ary.join(",") + ",")
-
-# 解答例2
-# 入力
-ary = gets.split.map(&:to_i)
-# 配列 ary の先頭から順に "," で連結する
+# ary 先頭から順に "," を追加する
 s = ""
 ary.each do |n|
   s += n.to_s + ","
 end
 # 出力
 puts(s)
+
+# 解答例2
+# 入力
+ary = gets.split.map(&:to_i)
+# 出力
+puts(ary.join(",") + ",")
 
 =begin
 カンマ区切りで 10 個出力 1 (paizaランク D 相当)

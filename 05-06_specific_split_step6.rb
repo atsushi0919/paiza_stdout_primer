@@ -23,20 +23,24 @@ OUTPUT3 = <<~"EOS"
   123,456,789,123,456,789
 EOS
 
-# 解答例1
+# 解答例
 # 入力
 n = gets.to_i
-# n を文字列に変換して1文字に分割した配列を生成
-ary = n.to_s.chars
-# 3 桁毎に "," を追加する
-s = ""
-ary.each.with_index(1) do |c, i|
-  s += c
-  break if i == ary.length
-  s += "," if i % 3 == 0
+# n を文字列に変換する
+s = n.to_s
+# s 末尾のインデックス
+e_i = s.length - 1
+# s の先頭から順にインデックスで参照する
+c_s = ""
+0.upto(e_i) do |i|
+  c_s += s[i]
+  # 末尾以外かつ 3 の倍数番目の桁に カンマ"," を打つ
+  if i != e_i && (i + 1) % 3 == 0
+    c_s += ","
+  end
 end
 # 出力
-puts(s)
+puts(c_s)
 
 # 解答例2
 # 入力

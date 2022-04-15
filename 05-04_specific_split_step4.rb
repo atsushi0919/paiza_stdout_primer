@@ -19,22 +19,23 @@ EOS
 # 解答例1
 # 入力
 ary = gets.split.map(&:to_i)
+# ary 末尾のインデックス
+e_i = ary.length - 1
+# ary 先頭から順に "," で連結する
+s = ""
+0.upto(e_i) do |i|
+  s += ary[i]
+  # 最後の要素以外は "," を追加
+  s += "," if i != e_i
+end
 # 出力
-puts(ary.join(","))
+puts(s)
 
 # 解答例2
 # 入力
 ary = gets.split.map(&:to_i)
-# 配列 ary の先頭から順に "," で連結する
-s = ""
-ary.each_with_index do |n, i|
-  s += n.to_s
-  # 最後の要素は "," を追加しない
-  break if i == ary.length - 1
-  s += ","
-end
 # 出力
-puts(s)
+puts(ary.join(","))
 
 =begin
 カンマ区切りで 10 個出力 2 (paizaランク D 相当)

@@ -22,7 +22,7 @@ row = []
 ary.each.with_index(1) do |n, i|
   # n (i 番目の要素) を row に追加する
   row.push(n)
-  # w=3 個毎に matrix に row を追加し row を空にする 
+  # 要素数 w=3 個毎に matrix に row を追加し row を空にする
   if i % w == 0
     matrix.push(row)
     row = []
@@ -35,20 +35,17 @@ puts(matrix.map { |row| row.join(" ") }.join("\n"))
 w = 3
 # 入力
 ary = gets.split.map(&:to_i)
-# 3 x 3 の行列を作成
-matrix = []
+# ary の先頭から順に i=1 からカウントアップしながら参照
 row = []
-while ary.length > 0
+ary.each.with_index(1) do |n, i|
   # ary の先頭から要素を取り出して row に追加する
-  row.push(ary.shift)
-  # row の要素数が w=3 個なら matrix に row を追加し row を空にする
-  if row.length == w
-    matrix.push(row)
+  row.push(n)
+  # 要素数 w=3 個毎に row から取り出して半角スペース区切りで出力する
+  if i % w == 0
+    puts(row.join(" "))
     row = []
   end
 end
-# 出力
-puts(matrix.map { |row| row.join(" ") }.join("\n"))
 
 =begin
 3 * 3 の出力 (paizaランク D 相当)

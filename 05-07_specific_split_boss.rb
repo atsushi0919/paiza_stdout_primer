@@ -26,18 +26,23 @@ EOS
 # 解答例1
 # 入力
 n = gets.to_i
-# 3 桁毎に "," を追加する
-# n を文字列に変換して1文字に分割した配列を生成
-r_ary = n.to_s.chars.reverse
-s = ""
-r_ary.each.with_index(1) do |c, i|
-  s += c
-  break if i == r_ary.length
-  s += "," if i % 3 == 0
+# n を文字列に変換して左右逆にする
+r_s = n.to_s.reverse
+# r_s 末尾のインデックス
+e_i = r_s.length - 1
+# r_s の先頭から順にインデックスで参照する
+c_s = ""
+0.upto(e_i) do |i|
+  c_s += r_s[i]
+  # 末尾以外かつ 3 の倍数番目の桁に カンマ"," を打つ
+  if i != e_i && (i + 1) % 3 == 0
+    c_s += ","
+  end
 end
-s.reverse!
+# 左右反転させてカンマ付きの文字列を元に戻す
+c_s.reverse!
 # 出力
-puts(s)
+puts(c_s)
 
 # 解答例2
 # 入力

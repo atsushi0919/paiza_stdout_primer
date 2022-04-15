@@ -10,6 +10,7 @@ puts(ary.map { |row| row.join(" ") }.join("\n"))
 ary = [[0, 8], [1, 3]]
 # 出力
 ary.each do |row|
+  # 1 行毎に半角スペース区切りで出力する
   puts(row.join(" "))
 end
 
@@ -22,6 +23,7 @@ row = []
 ary.each.with_index(1) do |n, i|
   # n (i 番目の要素) を row に追加する
   row.push(n)
+  # 要素数 w=2 個毎に半角スペース区切りで出力する
   if i % w == 0
     puts(row.join(" "))
     row = []
