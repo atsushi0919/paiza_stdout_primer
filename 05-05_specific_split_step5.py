@@ -5,9 +5,15 @@
 # 入力
 ary = [int(input()) for _ in range(10)]
 # 出力
-print(" | ".join(map(str, ary)))
+print(*ary, sep=" | ")
 
 # 解答例2
+# 入力
+ary = [int(input()) for _ in range(10)]
+# 出力
+print(" | ".join(map(str, ary)))
+
+# 解答例3
 # 入力
 ary = [int(input()) for _ in range(10)]
 # 配列 ary の先頭から順に " | " で連結する
