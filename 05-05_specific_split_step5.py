@@ -21,10 +21,10 @@ print(s)
 # 入力
 ary = [int(input()) for _ in range(10)]
 # 出力
-print(*ary, sep=" | ")
+print(" | ".join(map(str, ary)))
 
 # 解答例3
 # 入力
 ary = [int(input()) for _ in range(10)]
 # 出力
-print(" | ".join(map(str, ary)))
+print(*ary, sep=" | ")
