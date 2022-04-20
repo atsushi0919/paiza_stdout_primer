@@ -26,22 +26,16 @@ EOS
 n = gets.to_i
 ary = gets.split.map(&:to_i)
 # 出力
-ary.each { |m| puts((1..m).to_a.join(" ")) }
+ary.each do |m|
+  puts((1..m).to_a.join(" "))
+end
 
 # 解答例2
 # 入力
 n = gets.to_i
 ary = gets.split.map(&:to_i)
 # 出力
-ary.each do |m|
-  s = ""
-  1.upto(m) do |j|
-    s += j.to_s
-    break if j == m
-    s += " "
-  end
-  puts(s)
-end
+ary.each { |m| puts((1..m).to_a.join(" ")) }
 
 =begin
 すべての行の長さが不定な 2 次元配列の出力 (paizaランク C 相当)

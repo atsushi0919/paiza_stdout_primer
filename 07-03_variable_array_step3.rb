@@ -23,21 +23,15 @@ EOS
 # 入力
 n = gets.to_i
 # 出力
-1.upto(n) { |i| puts((1..i).to_a.join(" ")) }
+1.upto(n) do |i|
+  puts((1..i).to_a.join(" "))
+end
 
 # 解答例2
 # 入力
 n = gets.to_i
 # 出力
-1.upto(n) do |i|
-  s = ""
-  1.upto(i) do |j|
-    s += j.to_s
-    break if j == i
-    s += " "
-  end
-  puts(s)
-end
+1.upto(n) { |i| puts((1..i).to_a.join(" ")) }
 
 =begin
 直角三角形の出力 (paizaランク D 相当)

@@ -1,5 +1,5 @@
-#　数値を異なる長さで 2 行出力 (paizaランク D 相当)
-#　https://paiza.jp/works/mondai/stdout_primer/stdout_primer__variable_array_step2
+# 数値を異なる長さで 2 行出力 (paizaランク D 相当)
+# https://paiza.jp/works/mondai/stdout_primer/stdout_primer__variable_array_step2
 
 # 入出力例
 INPUT1 = <<~"EOS"
@@ -13,9 +13,13 @@ EOS
 # 解答例
 # 入力
 n, m = gets.split.map(&:to_i)
+# ary_n: 1 以上 n 以下の整数の配列
+ary_n =(1..n).to_a
+# ary_m: 1 以上 m 以下の整数の配列
+ary_m =(1..m).to_a
 # 出力
-puts((1..n).to_a.join(" "))
-puts((1..m).to_a.join(" "))
+puts(ary_n.join(" "))
+puts(ary_m.join(" "))
 
 =begin
 数値を異なる長さで 2 行出力 (paizaランク D 相当)
@@ -30,7 +34,9 @@ https://paiza.jp/works/mondai/stdout_primer/stdout_primer__variable_array_step2
 コードを書いて解いてみる
 問題
  下記の問題をプログラミングしてみよう！
-自然数 N, M が与えられます。1 行目には 1 以上 N 以下の数値を半角スペース区切りで出力してください。また、2 行目には 1 以上 M 以下の数値を半角スペース区切りで出力してください。
+自然数 N, M が与えられます。1 行目には 1 以上 N 以下の数値を半角スペース区切りで
+出力してください。
+また、2 行目には 1 以上 M 以下の数値を半角スペース区切りで出力してください。
 さらに、各行の末尾には、半角スペースの代わりに改行を入れてください。
 
 入力される値

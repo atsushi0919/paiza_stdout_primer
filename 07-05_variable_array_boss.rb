@@ -28,14 +28,6 @@ EOS
 n, m = gets.split.map(&:to_i)
 ary_a = gets.split.map(&:to_i)
 ary_b = gets.split.map(&:to_i)
-# ary_a の先頭から b 個取り出して出力
-ary_b.each { |b| puts(ary_a.shift(b).join(" ")) }
-
-# 解答例2
-# 入力
-n, m = gets.split.map(&:to_i)
-ary_a = gets.split.map(&:to_i)
-ary_b = gets.split.map(&:to_i)
 # ary_b の要素で繰り返し処理
 ary_b.each do |b|
   # ary_a の先頭から b 個分の要素を半角スペース区切りで出力
@@ -43,6 +35,14 @@ ary_b.each do |b|
   # 出力済みの要素を削除
   ary_a = ary_a[b..]
 end
+
+# 解答例2
+# 入力
+n, m = gets.split.map(&:to_i)
+ary_a = gets.split.map(&:to_i)
+ary_b = gets.split.map(&:to_i)
+# ary_a の先頭から b 個取り出して出力
+ary_b.each { |b| puts(ary_a.shift(b).join(" ")) }
 
 =begin
 【行によって長さが違う二次元配列の表示】すべての行の長さと値が不定な 2 次元配列の出力 (paizaランク B 相当)
