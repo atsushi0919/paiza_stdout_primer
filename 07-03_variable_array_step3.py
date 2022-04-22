@@ -24,11 +24,10 @@
 n = int(input())
 # 出力
 for i in range(1, n + 1):
-  print(*list(range(1, i + 1)))
-
+  print(*range(1, i + 1))
 
 # 解答例2
 # 入力
 n = int(input())
 # 出力
-[print(*list(range(1, i + 1))) for i in range(1, n + 1)]
+[print(*range(1, i + 1)) for i in range(1, n + 1)]

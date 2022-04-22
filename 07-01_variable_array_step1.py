@@ -6,8 +6,6 @@
 n = int(input())
 # 配列生成
 ary = list(range(1, n + 1))
-# n/2 の位置
-mid = n // 2
 # 出力
-print(*ary[:mid])
-print(*ary[mid:])
+print(*ary[:n//2])
+print(*ary[n//2:])

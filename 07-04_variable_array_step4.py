@@ -27,12 +27,11 @@ n = int(input())
 ary = map(int, input().split())
 # 出力
 for m in ary:
-    print(*list(range(1, m + 1)))
-
+    print(*range(1, m + 1))
 
 # 解答例2
 # 入力
 n = int(input())
 ary = map(int, input().split())
 # 出力
-[print(*list(range(1, m + 1))) for m in ary]
+[print(range(1, m + 1)) for m in ary]
