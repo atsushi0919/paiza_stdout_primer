@@ -46,6 +46,22 @@ n = gets.to_i
 # 続く n 行入力
 ary = n.times.map { gets.to_i }
 # 出力
+ary.each { |m| puts(sprintf("%3d", m)) }
+
+# 解答例3
+# 1 行目入力
+n = gets.to_i
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
+ary.each { |m| puts(format("%3d", m)) }
+
+# 解答例4
+# 1 行目入力
+n = gets.to_i
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
 ary.each { |m| puts(m.to_s.rjust(3)) }
 
 =begin

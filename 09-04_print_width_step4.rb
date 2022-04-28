@@ -26,6 +26,24 @@ puts("%#{m}d" % n)
 # 入力
 n, m = gets.split.map(&:to_i)
 # 出力
+puts("%*d" % [m, n])
+
+# 解答例3
+# 入力
+n, m = gets.split.map(&:to_i)
+# 出力
+puts(sprintf("%*d", m, n))
+
+# 解答例4
+# 入力
+n, m = gets.split.map(&:to_i)
+# 出力
+puts(format("%*d", m, n))
+
+# 解答例5
+# 入力
+n, m = gets.split.map(&:to_i)
+# 出力
 puts(n.to_s.rjust(m))
 
 =begin

@@ -30,6 +30,30 @@ n, m = gets.split.map(&:to_i)
 # 続く n 行入力
 ary = n.times.map { gets.to_i }
 # 出力
+ary.each { |num| puts("%*d" % [m, num]) }
+
+# 解答例3
+# 1 行目入力
+n, m = gets.split.map(&:to_i)
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
+ary.each { |num| puts(sprintf("%*d", m, num)) }
+
+# 解答例4
+# 1 行目入力
+n, m = gets.split.map(&:to_i)
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
+ary.each { |num| puts(format("%*d", m, num)) }
+
+# 解答例5
+# 1 行目入力
+n, m = gets.split.map(&:to_i)
+# 続く n 行入力
+ary = n.times.map { gets.to_i }
+# 出力
 ary.each { |num| puts(num.to_s.rjust(m)) }
 
 =begin

@@ -26,9 +26,21 @@ puts("%3d" % n)
 # 入力
 n = gets.to_i
 # 出力
-puts(n.to_s.rjust(3))
+puts(sprintf("%3d", n))
 
 # 解答例3
+# 入力
+n = gets.to_i
+# 出力
+puts(format("%3d", n))
+
+# 解答例4
+# 入力
+n = gets.to_i
+# 出力
+puts(n.to_s.rjust(3, " "))
+
+# 解答例5
 # 入力
 n = gets.to_i
 # 3 桁になるようにスペースで埋める

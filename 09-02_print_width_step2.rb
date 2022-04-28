@@ -26,6 +26,18 @@ puts("%03d" % n)
 # 入力
 n = gets.to_i
 # 出力
+puts(sprintf("%03d", n))
+
+# 解答例3
+# 入力
+n = gets.to_i
+# 出力
+puts(format("%03d", n))
+
+# 解答例4
+# 入力
+n = gets.to_i
+# 出力
 puts(n.to_s.rjust(3, "0"))
 
 =begin
